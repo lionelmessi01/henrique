@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sistema de Controle de Salas</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+body{
+background:#f4f6f9;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.topbar{
+background:#1f5fae;
+color:white;
+padding:12px 20px;
+}
+
+.sidebar{
+height:calc(100vh - 60px);
+background:white;
+border-right:1px solid #e3e3e3;
+}
+
+.sidebar .nav-link{
+color:#555;
+font-weight:500;
+border-radius:10px;
+padding:10px 12px;
+}
+
+.sidebar .nav-link.active{
+background:#f4e6d6;
+color:#000;
+}
+
+.sidebar .nav-link:hover{
+background:#f1f1f1;
+}
+
+.card-dashboard{
+border:none;
+border-radius:14px;
+padding:15px;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card-title-small{
+font-size:14px;
+color:#777;
+}
+
+.card-value{
+font-size:26px;
+font-weight:700;
+}
+
+.section-card{
+background:white;
+padding:20px;
+border-radius:14px;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.period-btn{
+border-radius:20px;
+padding:4px 14px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+
+<div class="topbar d-flex justify-content-between align-items-center">
+
+<div class="d-flex align-items-center gap-2">
+<i class="bi bi-building"></i>
+<div>
+<strong>Sistema de Controle de Salas</strong><br>
+<small>Dashboard</small>
+</div>
+</div>
+
+<div>
+<i class="bi bi-person-circle"></i> Admin
+<button class="btn btn-sm btn-light ms-3">
+<i class="bi bi-box-arrow-right"></i> Sair
+</button>
+</div>
+
+</div>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- SIDEBAR -->
+
+<div class="col-md-2 sidebar p-3">
+
+<ul class="nav flex-column">
+
+<li class="nav-item mb-2">
+<a class="nav-link active" href="#"><i class="bi bi-speedometer2"></i> Dashboard</a>
+</li>
+
+<li class="nav-item mb-2">
+<a class="nav-link" href="#"><i class="bi bi-door-open"></i> Salas</a>
+</li>
+
+<li class="nav-item mb-2">
+<a class="nav-link" href="#"><i class="bi bi-people"></i> Usuários</a>
+</li>
+
+<li class="nav-item mb-2">
+<a class="nav-link" href="#"><i class="bi bi-bar-chart"></i> Relatórios</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#"><i class="bi bi-gear"></i> Configurações</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="col-md-10 p-4">
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<div>
+<h4>Dashboard</h4>
+<small class="text-muted">Visão geral do uso das salas</small>
+</div>
+
+<button class="btn btn-warning">
+<i class="bi bi-plus-circle"></i> Nova Sala
+</button>
+
+</div>
+
+<div class="row g-3 mb-4">
+
+<div class="col-md-3">
+<div class="card-dashboard bg-white">
+<div class="card-title-small">Total de salas</div>
+<div class="card-value">6</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card-dashboard bg-white">
+<div class="card-title-small">Livres</div>
+<div class="card-value text-success">4</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card-dashboard bg-white">
+<div class="card-title-small">Em uso</div>
+<div class="card-value text-danger">2</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card-dashboard bg-white">
+<div class="card-title-small">Manutenção</div>
+<div class="card-value text-warning">8</div>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="section-card">
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+
+<div>
+<h6>Ocupação por período</h6>
+<small class="text-muted">Selecione a data e veja as salas ocupadas por turno</small>
+</div>
+
+<div class="d-flex gap-2">
+
+<select class="form-select form-select-sm">
+<option>05</option>
+<option>06</option>
+<option>07</option>
+</select>
+
+<select class="form-select form-select-sm">
+<option>03 - Mar</option>
+<option>04 - Abr</option>
+</select>
+
+<select class="form-select form-select-sm">
+<option>2026</option>
+<option>2027</option>
+</select>
+
+<button class="btn btn-outline-secondary btn-sm">
+<i class="bi bi-calendar"></i> Hoje
+</button>
+
+<button class="btn btn-outline-secondary btn-sm">
+<i class="bi bi-x-circle"></i> Limpar
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="mb-3">
+
+<button class="btn btn-primary btn-sm period-btn">Manhã</button>
+<button class="btn btn-outline-primary btn-sm period-btn">Tarde</button>
+<button class="btn btn-outline-primary btn-sm period-btn">Noite</button>
+
+</div>
+
+<div class="mb-3">
+
+<small class="text-muted">
+Data: <strong>2026-03-05</strong> —
+Período: <strong>Manhã</strong>
+<span class="badge bg-success">Livre</span>
+</small>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

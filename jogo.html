@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Descubra o Animal</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .game-card {
+      background-color: rgba(0,0,0,0.8);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .tentativas {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="game-card col-md-4">
+    <div class="title">🐾 Descubra o Animal</div>
+
+    <p>Tente adivinhar o animal secreto!</p>
+
+    <!-- INPUT -->
+    <input 
+      type="text" 
+      id="inputNumero" 
+      class="form-control mb-3" 
+      placeholder="Digite o nome do animal"
+    >
+
+    <!-- BOTÃO TENTAR -->
+    <button class="btn btn-warning w-100">
+      Tentar
+    </button>
+
+    <!-- BOTÃO RESET -->
+    <button id="resetar" class="btn btn-light w-100 mt-2">
+      🔄 Recomeçar
+    </button>
+
+    <!-- MENSAGEM -->
+    <div class="message text-warning" id="mensagem">
+      Boa sorte!
+    </div>
+
+    <!-- TENTATIVAS -->
+    <div class="tentativas">
+      Tentativas restantes: 3
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="jogo.js"></script>
+
+</body>
+</html>

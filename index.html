@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Sistema de Controle de Salas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="background-color:#F5F7FB; margin:0;">
+
+<header>
+    <div style="
+    background-color:#004A8D;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:600;
+">
+    <i class="bi bi-building me-2"></i>
+    Sistema de Controle de Salas
+</div>
+</header>
+
+<main>
+<div class="flex-grow-1 d-flex justify-content-center align-items-center">
+
+    <div class="card shadow border-0 p-4" style="width:380px; border-radius:12px; background-color:#FFFFFF;">
+
+        <div class="text-center mb-3">
+            <i class="bi bi-door-open" style="font-size:40px; color:#004A8D;"></i>
+            <h4 class="fw-bold mt-2" style="color:#004A8D;">Login</h4>
+            <p style="font-size:14px; color:#64748B;">
+                Acesse para controlar o uso das salas de aula
+            </p>
+        </div>
+
+        <!-- ALERTA -->
+        <div class="alert alert-danger py-2" style="font-size:13px;">
+            <i class="bi bi-exclamation-triangle me-1"></i>
+            E-mail ou senha inválidos.
+        </div>
+
+        <!-- EMAIL -->
+        <div class="mb-3">
+            <label class="form-label" style="font-size:14px;">E-mail</label>
+            <div class="input-group">
+                <span class="input-group-text bg-light">
+                    <i class="bi bi-envelope-fill"></i>
+                </span>
+                <input type="email" class="form-control"
+                       value="vitrineata@vitrineata.com.br">
+            </div>
+        </div>
+
+        <!-- SENHA -->
+        <div class="mb-3">
+            <label class="form-label" style="font-size:14px;">Senha</label>
+            <div class="input-group">
+                <span class="input-group-text bg-light">
+                    <i class="bi bi-lock-fill"></i>
+                </span>
+                <input type="password" class="form-control" value="1234">
+            </div>
+        </div>
+
+        <!-- LEMBRAR -->
+        <div class="form-check mb-3" style="font-size:14px;">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+                Lembrar-me
+            </label>
+        </div>
+
+        <!-- BOTÃO -->
+        <button class="btn w-100 text-white fw-semibold"
+                style="background-color:#F7941D;">
+            <i class="bi bi-box-arrow-in-right me-1"></i>
+            Entrar
+        </button>
+
+        <!-- LINKS -->
+        <div class="text-center mt-3" style="font-size:13px;">
+            <a href="#" class="d-block text-decoration-none" style="color:#004A8D;">
+                Esqueci minha senha
+            </a>
+            <span>Não possui cadastro?</span>
+            <a href="#" class="fw-semibold text-decoration-none" style="color:#004A8D;">
+                Cadastre-se
+            </a>
+        </div>
+
+    </div>
+
+</div>
+</main>
+<footer>
+
+<div style="
+    background-color:#004A8D;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:13px;
+">
+    <i class="bi bi-mortarboard-fill me-1"></i>
+    Sistema de Controle de Salas | Projeto Educacional Senac
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
